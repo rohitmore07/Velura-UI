@@ -16,7 +16,7 @@ const MobileMenu = ({ isOpen }) => (
           <NavLink href="#features" className="block px-3 py-2">Features</NavLink>
           <NavLink href="#components" className="block px-3 py-2">Components</NavLink>
           <NavLink href="#docs" className="block px-3 py-2">Documentation</NavLink>
-          <NavLink href="https://github.com" className="flex items-center gap-2 px-3 py-2">
+          <NavLink href="https://github.com/rohitmore07/Velura-UI" className="flex items-center gap-2 px-3 py-2">
             <Github size={20} />
             GitHub
           </NavLink>

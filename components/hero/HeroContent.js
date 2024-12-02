@@ -15,14 +15,14 @@ const HeroContent = () => (
     >
       <h1 className="text-4xl md:text-5xl font-bold text-black mb-6 tracking-tight">
         Build beautiful React apps with
-        <span className="bg-gradient-to-r from-black to-velura-blue bg-clip-text text-transparent"> Velura UI</span>
+        <span className="bg-gradient-to-r from-black to-[#AB886D] bg-clip-text text-transparent"> Velura UI</span>
       </h1>
     </motion.div>
     <motion.p 
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.3 }}
-      className="text-xl md:text-2xl text-black/80 mb-8 max-w-2xl mx-auto leading-relaxed"
+      className="text-xl md:text-xl text-black/80 mb-6 max-w-2xl mx-auto leading-relaxed"
     >
       A modern React component library with beautiful, responsive components built with Tailwind CSS. Perfect for your next project.
     </motion.p>
@@ -32,11 +32,11 @@ const HeroContent = () => (
       transition={{ duration: 0.8, delay: 0.4 }}
       className="flex flex-col sm:flex-row gap-4 justify-center"
     >
-      <button className="group inline-flex items-center px-8 py-4 bg-[#493628] text-white rounded-lg hover:bg-velura-blue transition-all duration-300 transform hover:scale-105">
+      <button className="group inline-flex items-center px-6 py-3 bg-[#493628] text-white rounded-lg hover:bg-velura-blue transition-all duration-300 transform hover:scale-105">
         <span className="mr-2">Get Started</span>
         <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
       </button>
-      <button className="inline-flex items-center px-8 py-4 bg-white text-[#493628] rounded-lg border border-[#493628] hover:border-black/30 hover:bg-velura-sand/20 transition-all duration-300 transform hover:scale-105">
+      <button className="inline-flex items-center px-6 py-3 bg-white text-[#493628] rounded-lg border border-[#493628] hover:border-black/30 hover:bg-velura-sand/20 transition-all duration-300 transform hover:scale-105">
         View Components
       </button>
     </motion.div>

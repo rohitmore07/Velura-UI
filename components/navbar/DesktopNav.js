@@ -7,7 +7,7 @@ const DesktopNav = () => (
       <NavLink href="#features">Features</NavLink>
       <NavLink href="#components">Components</NavLink>
       <NavLink href="#docs">Documentation</NavLink>
-      <NavLink href="https://github.com" className="flex items-center gap-2">
+      <NavLink href="https://github.com/rohitmore07/Velura-UI" className="flex items-center gap-2">
         <Github size={20} />
         GitHub
       </NavLink>

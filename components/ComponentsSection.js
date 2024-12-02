@@ -21,7 +21,7 @@ const ComponentsSection = () => {
             Get started with Velura UI by installing the package from npm
           </p>
           <div className="flex justify-center mb-12">
-            <div className="relative flex items-center bg-black text-white rounded-lg p-4">
+            <div className="relative flex items-center bg-[#493628] text-white rounded-lg p-4">
               <code className="font-mono">npm install velura-ui</code>
               <button
                 onClick={copyCommand}

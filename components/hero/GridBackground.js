@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const GridBackground = () => (
   <>
-    <div className="absolute inset-0 bg-white bg-grid-black/[0.07]">
+    <div className="absolute inset-0 bg-[#E4E0E1] bg-grid-white/[0.4]">
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -23,8 +23,8 @@ const GitHubSection = () => {
               </div>
             </div>
             <a
-              href="https://github.com"
-              className="px-6 py-2 bg-velura-slate text-white rounded-lg hover:bg-velura-blue transition-colors inline-flex items-center gap-2"
+              href="https://github.com/rohitmore07/Velura-UI"
+              className="px-6 py-2 bg-velura-slate text-[#493628] hover:text-white bg-[#E4E0E1] rounded-lg hover:bg-[#493628] transition-colors inline-flex items-center gap-2"
             >
               <Github size={20} />
               View on GitHub
