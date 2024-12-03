@@ -1,14 +1,44 @@
 import { useState } from 'react';
 import DocSearch from './documentation/DocSearch';
 import DocSidebar from './documentation/DocSidebar';
-import DocContent from './documentation/DocContent';
+import Introduction from './documentation/sections/Introduction';
+import Installation from './documentation/sections/Installation';
+import QuickStart from './documentation/sections/QuickStart';
+import Buttons from './documentation/sections/components/Buttons';
+import Forms from './documentation/sections/components/Forms';
+import Navigation from './documentation/sections/components/Navigation';
+import Layout from './documentation/sections/components/Layout';
+import Guides from './documentation/sections/Guides';
 
 const Documentation = () => {
+  const [activeSection, setActiveSection] = useState('introduction');
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearch = (query) => {
     setSearchQuery(query);
-    // Implement search functionality here
+  };
+
+  const renderSection = () => {
+    switch (activeSection) {
+      case 'introduction':
+        return <Introduction />;
+      case 'installation':
+        return <Installation />;
+      case 'quick-start':
+        return <QuickStart />;
+      case 'buttons':
+        return <Buttons />;
+      case 'forms':
+        return <Forms />;
+      case 'navigation':
+        return <Navigation />;
+      case 'layout':
+        return <Layout />;
+      case 'guides':
+        return <Guides />;
+      default:
+        return <Introduction />;
+    }
   };
 
   return (
@@ -25,8 +55,10 @@ const Documentation = () => {
         </div>
 
         <div className="flex gap-8">
-          <DocSidebar />
-          <DocContent />
+          <DocSidebar activeSection={activeSection} onSectionChange={setActiveSection} />
+          <div className="flex-1 min-w-0">
+            {renderSection()}
+          </div>
         </div>
       </div>
     </section>

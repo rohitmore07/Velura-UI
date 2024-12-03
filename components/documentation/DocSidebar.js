@@ -4,31 +4,29 @@ const sections = [
   {
     title: 'Getting Started',
     items: [
-      { title: 'Introduction', href: '#introduction' },
-      { title: 'Installation', href: '#installation' },
-      { title: 'Quick Start', href: '#quick-start' },
+      { id: 'introduction', title: 'Introduction' },
+      { id: 'installation', title: 'Installation' },
+      { id: 'quick-start', title: 'Quick Start' },
     ],
   },
   {
     title: 'Components',
     items: [
-      { title: 'Buttons', href: '#buttons' },
-      { title: 'Forms', href: '#forms' },
-      { title: 'Navigation', href: '#navigation' },
-      { title: 'Layout', href: '#layout' },
+      { id: 'buttons', title: 'Buttons' },
+      { id: 'forms', title: 'Forms' },
+      { id: 'navigation', title: 'Navigation' },
+      { id: 'layout', title: 'Layout' },
     ],
   },
   {
     title: 'Guides',
     items: [
-      { title: 'Theming', href: '#theming' },
-      { title: 'Customization', href: '#customization' },
-      { title: 'Best Practices', href: '#best-practices' },
+      { id: 'guides', title: 'Guides' },
     ],
   },
 ];
 
-const DocSidebar = () => {
+const DocSidebar = ({ activeSection, onSectionChange }) => {
   return (
     <nav className="w-64 pr-8 hidden lg:block">
       <div className="sticky top-20">
@@ -36,18 +34,24 @@ const DocSidebar = () => {
           <div key={idx} className="mb-8">
             <h5 className="font-semibold text-black mb-4">{section.title}</h5>
             <ul className="space-y-2">
-              {section.items.map((item, itemIdx) => (
-                <li key={itemIdx}>
-                  <a
-                    href={item.href}
-                    className="flex items-center text-black/80 hover:text-velura-blue transition-colors group"
+              {section.items.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => onSectionChange(item.id)}
+                    className={`flex items-center w-full text-left ${
+                      activeSection === item.id
+                        ? 'text-velura-blue'
+                        : 'text-black/80 hover:text-velura-blue'
+                    } transition-colors group`}
                   >
                     <ChevronRight 
-                      className="opacity-0 group-hover:opacity-100 transition-opacity" 
-                      size={16} 
+                      className={`${
+                        activeSection === item.id ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                      } transition-opacity`}
+                      size={16}
                     />
                     <span>{item.title}</span>
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
