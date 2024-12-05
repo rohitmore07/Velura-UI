@@ -32,13 +32,13 @@ const HeroContent = () => (
       transition={{ duration: 0.8, delay: 0.4 }}
       className="flex flex-col sm:flex-row gap-4 justify-center"
     >
-      <button className="group inline-flex items-center px-6 py-3 bg-[#493628] text-white rounded-lg hover:bg-velura-blue transition-all duration-300 transform hover:scale-105">
+      <a href="/docs"><button className="group inline-flex items-center px-6 py-3 bg-[#493628] text-white rounded-lg hover:bg-velura-blue transition-all duration-300 transform hover:scale-105">
         <span className="mr-2">Get Started</span>
         <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-      </button>
-      <button className="inline-flex items-center px-6 py-3 bg-white text-[#493628] rounded-lg border border-[#493628] hover:border-black/30 hover:bg-velura-sand/20 transition-all duration-300 transform hover:scale-105">
+      </button></a>
+      <a href="/components"><button className="inline-flex items-center px-6 py-3 bg-white text-[#493628] rounded-lg border border-[#493628] hover:border-black/30 hover:bg-velura-sand/20 transition-all duration-300 transform hover:scale-105">
         View Components
-      </button>
+      </button></a>
     </motion.div>
   </motion.div>
 );
