@@ -1,3 +1,4 @@
+import NavigationDemo from './NavigationDemo';
 import CodeBlock from '../../CodeBlock';
 
 const Navigation = () => (
@@ -7,66 +8,28 @@ const Navigation = () => (
       Navigation components for creating intuitive user interfaces.
     </p>
 
-    <div className="space-y-8">
-      <div className="bg-velura-sand/10 rounded-lg p-6 border border-black/10">
-        <h3 className="text-xl font-semibold text-black mb-3">Navbar</h3>
-        <CodeBlock
-          code={`import { Navbar, NavItem } from 'velura-ui';
+    <div className="bg-velura-sand/10 rounded-lg p-6 border border-black/10">
+      <h3 className="text-xl font-semibold text-black mb-6">Live Demo</h3>
+      <NavigationDemo />
+    </div>
+
+    <div className="bg-velura-sand/10 rounded-lg p-6 border border-black/10">
+      <h3 className="text-xl font-semibold text-black mb-3">Usage</h3>
+      <CodeBlock
+        code={`import { Navbar, NavItem } from 'velura-ui';
 
 function Navigation() {
   return (
-    <Navbar>
-      <NavItem href="/">Home</NavItem>
+    <Navbar variant="glass" logo={<Logo />}>
+      <NavItem href="/" active>Home</NavItem>
       <NavItem href="/about">About</NavItem>
       <NavItem href="/contact">Contact</NavItem>
     </Navbar>
   );
 }`}
-          language="jsx"
-          title="Basic Navbar"
-        />
-      </div>
-
-      <div className="bg-velura-sand/10 rounded-lg p-6 border border-black/10">
-        <h3 className="text-xl font-semibold text-black mb-3">Tabs</h3>
-        <CodeBlock
-          code={`import { Tabs, TabList, Tab, TabPanel } from 'velura-ui';
-
-function TabNavigation() {
-  return (
-    <Tabs>
-      <TabList>
-        <Tab>Profile</Tab>
-        <Tab>Settings</Tab>
-      </TabList>
-      <TabPanel>Profile content</TabPanel>
-      <TabPanel>Settings content</TabPanel>
-    </Tabs>
-  );
-}`}
-          language="jsx"
-          title="Tabs Navigation"
-        />
-      </div>
-
-      <div className="bg-velura-sand/10 rounded-lg p-6 border border-black/10">
-        <h3 className="text-xl font-semibold text-black mb-3">Breadcrumbs</h3>
-        <CodeBlock
-          code={`import { Breadcrumbs, BreadcrumbItem } from 'velura-ui';
-
-function BreadcrumbNav() {
-  return (
-    <Breadcrumbs>
-      <BreadcrumbItem href="/">Home</BreadcrumbItem>
-      <BreadcrumbItem href="/products">Products</BreadcrumbItem>
-      <BreadcrumbItem current>Details</BreadcrumbItem>
-    </Breadcrumbs>
-  );
-}`}
-          language="jsx"
-          title="Breadcrumbs"
-        />
-      </div>
+        language="jsx"
+        title="Navigation Example"
+      />
     </div>
   </div>
 );

@@ -1,3 +1,4 @@
+import FormsDemo from './FormsDemo';
 import CodeBlock from '../../CodeBlock';
 
 const Forms = () => (
@@ -7,57 +8,42 @@ const Forms = () => (
       Form components for building accessible and user-friendly input interfaces.
     </p>
 
-    <div className="space-y-8">
-      <div className="bg-velura-sand/10 rounded-lg p-6 border border-black/10">
-        <h3 className="text-xl font-semibold text-black mb-3">Text Input</h3>
-        <CodeBlock
-          code={`import { Input } from 'velura-ui';
+    <div className="bg-velura-sand/10 rounded-lg p-6 border border-black/10">
+      <h3 className="text-xl font-semibold text-black mb-6">Live Demo</h3>
+      <FormsDemo />
+    </div>
+
+    <div className="bg-velura-sand/10 rounded-lg p-6 border border-black/10">
+      <h3 className="text-xl font-semibold text-black mb-3">Usage</h3>
+      <CodeBlock
+        code={`import { Input, Select, Checkbox } from 'velura-ui';
 
 function Form() {
   return (
-    <Input
-      label="Username"
-      placeholder="Enter username"
-      helperText="Must be at least 4 characters"
-    />
+    <form className="space-y-4">
+      <Input
+        label="Username"
+        placeholder="Enter username"
+      />
+      
+      <Select
+        label="Country"
+        options={[
+          { value: 'us', label: 'United States' },
+          { value: 'uk', label: 'United Kingdom' },
+          { value: 'ca', label: 'Canada' }
+        ]}
+      />
+      
+      <Checkbox
+        label="I accept the terms and conditions"
+      />
+    </form>
   );
 }`}
-          language="jsx"
-          title="Text Input"
-        />
-      </div>
-
-      <div className="bg-velura-sand/10 rounded-lg p-6 border border-black/10">
-        <h3 className="text-xl font-semibold text-black mb-3">Select</h3>
-        <CodeBlock
-          code={`import { Select, Option } from 'velura-ui';
-
-function Form() {
-  return (
-    <Select label="Country">
-      <Option value="us">United States</Option>
-      <Option value="uk">United Kingdom</Option>
-      <Option value="ca">Canada</Option>
-    </Select>
-  );
-}`}
-          language="jsx"
-          title="Select Input"
-        />
-      </div>
-
-      <div className="bg-velura-sand/10 rounded-lg p-6 border border-black/10">
-        <h3 className="text-xl font-semibold text-black mb-3">Checkbox & Radio</h3>
-        <CodeBlock
-          code={`<Checkbox label="Accept terms" />
-<RadioGroup>
-  <Radio value="option1" label="Option 1" />
-  <Radio value="option2" label="Option 2" />
-</RadioGroup>`}
-          language="jsx"
-          title="Checkbox & Radio"
-        />
-      </div>
+        language="jsx"
+        title="Form Examples"
+      />
     </div>
   </div>
 );
